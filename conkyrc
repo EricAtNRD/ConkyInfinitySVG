@@ -1,0 +1,89 @@
+#########################################################################################
+#    Conky Theme : Infinity                                                                                                                                                                                          #
+#    Created by     : Harshit Yadav                                                                                                                                                                              #
+#    Version           : 1.0                                                                                                                                                                                                  # 
+#    Feel Free to distribute                                                                                                                                                                                         #
+#    For Installation Instrcutions See Read Me                                                                                                                                                       #
+########################################################################################
+
+
+# Conky settings #
+background yes
+update_interval 1
+
+cpu_avg_samples 2
+net_avg_samples 2
+
+override_utf8_locale yes
+
+double_buffer yes
+no_buffers yes
+
+text_buffer_size 2048
+#imlib_cache_size 0
+
+temperature_unit fahrenheit
+
+# Window specifications #
+
+own_window yes
+own_window_type override
+own_window_transparent yes
+own_window_hints undecorate,sticky,skip_taskbar,skip_pager,below
+
+border_inner_margin 0
+border_outer_margin 0
+
+## This Resolution is set according to the sreen resolution of 1366x768 
+## Adjust Accoring to yours
+
+minimum_size 1366 560
+maximum_width 1366
+
+alignment tr
+gap_x 10
+gap_y 55
+
+# Graphics settings #
+draw_shades no
+draw_outline no
+draw_borders no
+draw_graph_borders no
+
+# Text settings #
+use_xft yes
+xftfont caviar dreams:size=8
+xftalpha 0.5
+
+uppercase no
+
+temperature_unit celsius
+
+
+default_color FFFFFF
+
+# Lua Load  #
+lua_load ~/.lua/scripts/haunted.lua
+lua_draw_hook_pre clock_rings
+
+## Adjust these fields according to the your screen size i have modded them for 1366X768
+
+TEXT
+ ${offset 700}${color EAEAEA}${font GE Inspira:pixelsize=120}${time %H:%M}${font}${voffset -84}${voffset 10}${color FFA300}${font GE Inspira:pixelsize=42}${time %d} ${voffset -15}${color EAEAEA}${font GE Inspira:pixelsize=22}${time  %B} ${time %Y}${font}${voffset 124}${font GE Inspira:pixelsize=58}${offset -800}${time %A}${font}
+${offset 720}${voffset -100}${font Ubuntu:pixelsize=10}${color FFA300}HD ${offset 9}$color${fs_free /} / ${fs_size /}${offset 30}${color FFA300}RAM ${offset 9}$color$mem / $memmax${offset 30}${color FFA300}CPU ${offset 9}$color${cpu cpu0}%
+${voffset 10}${offset 270}${color 2c2c2c}${hr 4}
+${image ~/.conky/rev-eng.png}
+
+
+${offset 130}${voffset 222}${font Santana:size=9:style=Bold}root : ${font Santana:size=9}${fs_used /}/${fs_size /}
+${offset 130}${voffset 10}${font Santana:size=9:style=Bold}home: ${font Santana:size=9}${fs_used /home}/${fs_size /home}$font
+${offset 120}${voffset 12}${color ffffff}${font Santana:size=9:style=Bold}swap: ${font Santana:size=8} ${swap} / ${swapfree}$font
+${offset 570}${voffset -110} ${color EAEAEA}Linux ${kernel} kernel
+${offset 570}${voffset 5} Uptime :${uptime}
+${offset 825}${voffset -80}${color ffffff}${font Santana:size=10:style=Bold}${exec whoami}@${nodename}
+${offset 825}${voffset 0}${color ffffff}${font Santana:size=8}${top name 5} ${top mem 5}
+${offset 680}${voffset 130}${color ffffff}${font Santana:size=8}IP Address :${addr wlan0}
+${offset 705}${voffset 10}${color ffffff}${font Santana:size=8}Down :${downspeed wlan0} k/s ${offset 8}Up:${upspeed wlan0} k/s
+${offset 703}${voffset 10}${color ffffff}${font Santana:size=8}TCP Connections: ${tcp_portmon 1 65535 count}
+${offset 680}${voffset 10}${color ffffff}${font Santana:size=8}Speed Graph :
+${offset 680}${voffset -10}${color ffffff}${font Santana:size=8}${color #000000}${downspeedgraph wlan0 32,150 000000 ffffff} ${color #000000}${upspeedgraph wlan0 32,150 000000 ffffff}

@@ -1,0 +1,76 @@
+#                 ############
+#                 # - cpu: - #
+#                 ############
+#       (created 09-11-2010 by Ken Berns)
+#(For questions and suggestions -> ken.berns@yahoo.de)
+#
+######################
+# - Conky settings - #
+######################
+background no
+update_interval 3
+ 
+cpu_avg_samples 2
+net_avg_samples 2
+ 
+override_utf8_locale yes
+ 
+double_buffer yes
+no_buffers yes
+ 
+text_buffer_size 10240
+imlib_cache_size 0
+ 
+#############################
+# - Window specifications - #
+#############################
+own_window_class Conky
+own_window yes
+own_window_type normal
+own_window_argb_visual yes
+own_window_argb_value 180
+own_window_transparent yes
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+ 
+border_inner_margin 0
+border_outer_margin 0
+ 
+minimum_size 120 150
+maximum_width 120
+ 
+alignment tl
+gap_x 270
+gap_y 330
+ 
+#########################
+# - Graphics settings - #
+#########################
+draw_shades no
+draw_outline no
+draw_borders no
+draw_graph_borders no
+ 
+#####################
+# - Text settings - #
+#####################
+use_xft yes
+xftfont Santana:size=10
+xftalpha 0.8
+ 
+uppercase no
+ 
+default_color FFFFFF
+
+############
+# - Code - #
+############
+TEXT
+${font Santana:size 12:style=Bold}CPU ${alignr}$cpu%${font}
+
+${top name 1} ${alignr}${top cpu 1}
+${top name 2} ${alignr}${top cpu 2}
+${top name 3} ${alignr}${top cpu 3}
+${top name 4} ${alignr}${top cpu 4}
+${top name 5} ${alignr}${top cpu 5}
+
+
