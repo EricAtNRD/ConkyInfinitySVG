@@ -1,15 +1,15 @@
 #########################################################################################
 #	Conky Theme	: InfinitySVG
 #
-#	Original Infinity theme by:		Harshit Yadav
 #	Updates and SVG by:				Eric Weik
-#	Version           : 1.1
+#	Original Infinity theme by:		Harshit Yadav
+#	Includes lua code:				Clock Rings by londonali1010 (2009)
 #	Feel Free to distribute
 #	For Installation Instructions see README
 #
 #	Changelog:
 #	 + v1.0.1:	Initial version by Harshit Yadav
-#    + v1.1:	Updates by EJW. 
+#    + v1.1.0:	Updates by EJW. 
 #				Support for 1920x1080 display
 #				Use eth0 instead of wlan0
 #				Turn off transparency (and allow compiz to handle it)
@@ -57,7 +57,6 @@ border_outer_margin 0
 #maximum_width 1366
 
 minimum_size 1920 1080
-#maximum_width 1920
 
 alignment tr
 gap_x 10
