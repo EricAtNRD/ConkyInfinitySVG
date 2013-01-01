@@ -1,7 +1,10 @@
 --[[
-Infinity by Harshit 
-original by someone i can't remeber the name
-This script draws the left rings of the screen that is with the clock
+Infinity by Harshit (2012)
+Based on: Clock Rings by londonali1010 (2009)
+
+This script draws percentage meters as rings, and also draws clock hands if you want! It is fully customisable; all options are described in the script. This script is based off a combination of my clock.lua script and my rings.lua script.
+
+IMPORTANT: if you are using the 'cpu' function, it will cause a segmentation fault if it tries to draw a ring straight away. The if statement on line 145 uses a delay to make sure that this doesn't happen. It calculates the length of the delay by the number of updates since Conky started. Generally, a value of 5s is long enough, so if you update Conky every 1s, use update_num>5 in that if statement (the default). If you only update Conky every 2s, you should change it to update_num>3; conversely if you update Conky every 0.5s, you should use update_num>10. ALSO, if you change your Conky, is it best to use "killall conky; conky" to update it, otherwise the update_num will not be reset and you will get an error.
 
 To call this script in Conky, use the following (assuming that you save this script to ~/scripts/rings.lua):
 	lua_load ~/scripts/haunted.lua
@@ -9,7 +12,7 @@ To call this script in Conky, use the following (assuming that you save this scr
 	
 Changelog:
 + v1.0 -- Original release (07/06/2012)
-+ v1.1 -- NRD: Updated to support 1920x1080 and handle some errors in Ubuntu 12.10
++ v1.1 -- EJW: Updated to support 1920x1080 and fix some errors in Ubuntu 12.10.
 ]]
 
 settings_table = {
@@ -83,7 +86,7 @@ settings_table = {
 		start_angle=60,
 		end_angle=120
 	},
---[[ NRD: Uncomment if you have a battery.  
+--[[ EJW: Uncomment if you have a battery.  
 	{
 		name='battery_percent',
 		arg='BAT1',
@@ -155,7 +158,7 @@ settings_table = {
 		start_angle=-90,
 		end_angle=30
 	},
---[[ NRD: This causes errors in Ubuntu 12.10
+--[[ EJW: This causes errors in Ubuntu 12.10
 		{
 		name='',
 		arg='',

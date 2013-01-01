@@ -1,19 +1,22 @@
 #########################################################################################
-#    Conky Theme : Infinity
-#    Created by     : Harshit Yadav
-#    Version           : 1.0
-#    Feel Free to distribute
-#    For Installation Instrcutions See Read Me
+#	Conky Theme	: InfinitySVG
 #
-#    Changelog:
-#    + v1.1 -- NRD: Updated:
-#              Support 1920x1080 display
-#              Use eth0 instead of wlan0
-#              Turn off transparency (and allow compiz to handle it)
-#              Use new background image.
+#	Original Infinity theme by:		Harshit Yadav
+#	Updates and SVG by:				Eric Weik
+#	Version           : 1.1
+#	Feel Free to distribute
+#	For Installation Instructions see README
+#
+#	Changelog:
+#	 + v1.0.1:	Initial version by Harshit Yadav
+#    + v1.1:	Updates by EJW. 
+#				Support for 1920x1080 display
+#				Use eth0 instead of wlan0
+#				Turn off transparency (and allow compiz to handle it)
+#				Use new SVG based background image.
 ########################################################################################
 
-# Conky settings #
+## Conky settings
 background yes
 update_interval 6
 
@@ -29,7 +32,7 @@ text_buffer_size 2048
 #imlib_cache_size 0
 
 
-# Window specifications #
+## Window specifications
 
 own_window yes
 
@@ -47,28 +50,28 @@ border_inner_margin 0
 border_outer_margin 0
 
 
-## This Resolution is set according to the sreen resolution of 1366x768 
-## Adjust Accoring to yours
+## This Resolution is set according to the screen resolution of 1920 1080
+## Adjust According to yours
 
 #minimum_size 800 560
 #maximum_width 1366
 
 minimum_size 1920 1080
-maximum_width 1920
+#maximum_width 1920
 
 alignment tr
 gap_x 10
 gap_y 55
 
 
-# Graphics settings #
+## Graphics settings
 draw_shades no
 draw_outline no
 draw_borders no
 draw_graph_borders no
 
 
-# Text settings #
+## Text settings
 use_xft yes
 xftfont caviar dreams:size=8
 xftalpha 0.5
@@ -81,12 +84,11 @@ temperature_unit fahrenheit
 default_color FFFFFF
 
 
-# Lua Load  #
+## Lua: load clock rings.
 lua_load ~/.lua/scripts/haunted.lua
 lua_draw_hook_pre clock_rings
 
-## Adjust these fields according to the your screen size i have modded them for 1366X768
-
+## Adjust these fields according to the your screen size if desired.
 TEXT
  ${offset 700}${color EAEAEA}${font GE Inspira:pixelsize=120}${time %H:%M}${font}${voffset -84}${voffset 10}${color FFA300}${font GE Inspira:pixelsize=42}${time %d} ${voffset -15}${color EAEAEA}${font GE Inspira:pixelsize=22}${time  %B} ${time %Y}${font}${voffset 124}${font GE Inspira:pixelsize=58}${offset -800}${time %A}${font}
 ${offset 720}${voffset -100}${font Ubuntu:pixelsize=10}${color FFA300}HD ${offset 9}$color${fs_free /} / ${fs_size /}${offset 30}${color FFA300}RAM ${offset 9}$color$mem / $memmax${offset 30}${color FFA300}CPU ${offset 9}$color${cpu cpu0}%
