@@ -9,6 +9,7 @@ To call this script in Conky, use the following (assuming that you save this scr
 	
 Changelog:
 + v1.0 -- Original release (07/06/2012)
++ v1.1 -- NRD: Updated to support 1920x1080 and handle some errors in Ubuntu 12.10
 ]]
 
 settings_table = {
@@ -82,34 +83,7 @@ settings_table = {
 		start_angle=60,
 		end_angle=120
 	},
-	{
-		name='cpu',
-		arg='cpu2',
-		max=100,
-		bg_colour=0xffffff,
-		bg_alpha=0,
-		fg_colour=0xebff46,
-		fg_alpha=0.1,
-		x=165, y=170,
-		radius=76,
-		thickness=5,
-		start_angle=60,
-		end_angle=120
-	},
-	{
-		name='cpu',
-		arg='cpu0',
-		max=100,
-		bg_colour=0xffffff,
-		bg_alpha=0.1,
-		fg_colour=0x46a646,
-		fg_alpha=0.4,
-		x=165, y=170,
-		radius=84.5,
-		thickness=8,
-		start_angle=60,
-		end_angle=120
-	},
+--[[ NRD: Uncomment if you have a battery.  
 	{
 		name='battery_percent',
 		arg='BAT1',
@@ -124,6 +98,7 @@ settings_table = {
 		start_angle=122,
 		end_angle=210
 	},
+]]
 	{
 		name='memperc',
 		arg='',
@@ -180,6 +155,7 @@ settings_table = {
 		start_angle=-90,
 		end_angle=30
 	},
+--[[ NRD: This causes errors in Ubuntu 12.10
 		{
 		name='',
 		arg='',
@@ -194,6 +170,7 @@ settings_table = {
 		start_angle=82,
 		end_angle=180
 	},
+]]
 	{
 		name='fs_used_perc',
 		arg='/home',
@@ -225,7 +202,8 @@ clock_alpha=0.5
 
 
 
-show_seconds=true
+--show_seconds=true
+show_seconds=false
 
 require 'cairo'
 

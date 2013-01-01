@@ -1,3 +1,3 @@
 #! /bin/bash
-sleep 20
+sleep 5
 conky -c ~/.conkyrc
