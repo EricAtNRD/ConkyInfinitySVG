@@ -1,12 +1,13 @@
 # InfinitySVG: A Theme for Conky
 
+
 ## About
 
 InfinitySVG is a theme for the "conky" system monitor for X. It is mostly based on the Infinity theme by Harshit Yadav.
 
-![InfinitySVG screenshot](images/InfinitySVG-screencap-960w.png "InfinitySVG Screenshot")
+![InfinitySVG screenshot](images/InfinitySVG-screencap-960w.png)
 
-For Harshit's original theme, please see: [Infinity on Deviantart.com](http://harshit1990.deviantart.com/art/Infinity-306921086 "Infinity on Deviantart.com")
+For Harshit's original theme, please see: [Infinity on Deviantart.com](http://harshit1990.deviantart.com/art/Infinity-306921086)
 
 
 ## Acknowledgements
@@ -23,12 +24,13 @@ As best I can tell, the following people had a hand in the creation of this them
 - Includes lua code: Clock Rings by londonali1010 (2009)
 	- [http://londonali1010.deviantart.com/](http://londonali1010.deviantart.com/)
 
+
 ## Installation Instructions
 
 1. Install Conky
 	- Ubuntu:   apt-get install conky-all
 	- Fedora: yum install conky
-	- Other: see your local documentation in order to install conky.
+	- Other: see your local documentation or try [the Conky documentation](http://conky.sourceforge.net/documentation.html).
 
 2. Extract the InfinitySVG tar file into its own directory somewhere.
 
