@@ -7,14 +7,16 @@
 #	Feel Free to distribute
 #	For Installation Instructions see README
 #
-#	Colors from haunted.lua:
-#	0xb7b7b7 (light grey)
-#	0x2c2c2c (dark grey)
-#	0x4a89a7 (teal / blue)
-#	0xe83737 (red)
-#	0xebff46 (yellow)
-#	0x46a646 (green)
-#	0xf4732d (orange)
+#	Colors from haunted.lua and .conkyrc:
+#	b7b7b7 (light grey)
+#	6f6f6f (medium grey)
+#	2c2c2c (dark grey)
+#	4a89a7 (teal / blue)
+#	e83737 (red)
+#	ebff46 (yellow)
+#	46a646 (green)
+#	f4732d (orange)
+#	FFA300 (bright orange)
 #
 #	Changelog:
 #	 + v1.0.1:	Initial version by Harshit Yadav
@@ -27,7 +29,7 @@
 
 ## Conky settings
 background yes
-update_interval 1.0
+update_interval 10.0
 
 cpu_avg_samples 2
 net_avg_samples 2
@@ -94,10 +96,9 @@ lua_load ~/.lua/scripts/haunted.lua
 lua_draw_hook_pre clock_rings
 
 
-
-# Possible variables to be used:
+## Possible variables to be used:
 #
-#      Variable         Arguments                  Description                
+# 	Variable          Arguments     Description
 
 # 	addr              (interface)   IP address for an interface
 # 	acpiacadapter                   ACPI ac adapter state.                   
@@ -274,40 +275,38 @@ lua_draw_hook_pre clock_rings
 # 	seti_prog                       Seti@home current progress
 # 	seti_progbar      (height)      Seti@home current progress bar
 # 	seti_credit                     Seti@home total user credit
-
+#
 # variable is given either in format $variable or in ${variable}. Latter
 # allows characters right after the variable and must be used in network
 # stuff because of an argument
 
-#	0xb7b7b7 (light grey)
-#	0x2c2c2c (dark grey)
-#	0x4a89a7 (teal / blue)
-#	0xe83737 (red)
-#	0xebff46 (yellow)
-#	0x46a646 (green)
-#	0xf4732d (orange)
-
 
 # stuff after 'TEXT' will be formatted on screen
 TEXT
+# Clock and header
  ${offset 700}${color EAEAEA}${font GE Inspira:pixelsize=120}${time %H:%M}${font}${voffset -84}${voffset 10}${color FFA300}${font GE Inspira:pixelsize=42}${time %d} ${voffset -15}${color EAEAEA}${font GE Inspira:pixelsize=22}${time  %B} ${time %Y}${font}${voffset 124}${font GE Inspira:pixelsize=58}${offset -800}${time %A}${font}
 ${offset 720}${voffset -100}${font Ubuntu:pixelsize=10}${color FFA300}HD ${offset 9}$color${fs_free /} / ${fs_size /}${offset 30}${color FFA300}RAM ${offset 9}$color$mem / $memmax${offset 30}${color FFA300}CPU ${offset 9}$color${cpu cpu0}%
 ${voffset 10}${offset 270}${color 2c2c2c}${hr 4}
 ${image ~/.conky/background.png}
 
 
+# Disk usage node
 ${offset 120}${voffset 222}${color bfbfbf}${font Santana:size=9:style=Bold}root : ${font Santana:size=9}${fs_used /}/${fs_size /}
 ${offset 120}${voffset 10}${color dfdfdf}${font Santana:size=9:style=Bold}home: ${font Santana:size=9}${fs_used /home}/${fs_size /home}$font
 ${offset 120}${voffset 12}${color ffffff}${font Santana:size=9:style=Bold}swap: ${font Santana:size=8} ${swap} / ${swapfree}$font
-${offset 578}${voffset -110} ${color EAEAEA}${font Santana:size=9:style=Bold}Linux ${kernel} kernel
-${offset 578}${voffset 0} ${font Santana:size=8}Uptime: ${uptime}
-${offset 830}${voffset -80}${color ffffff}${font Santana:size=9:style=Bold}${exec whoami}@${nodename}
-${offset 830}${voffset 0}${color ffffff}${font Santana:size=8}${top name 5} ${top mem 5}
-${offset 830}${voffset 0}CPU Usage (${cpu}%):
-${offset 830}${voffset 0}${color ffffff}${font Santana:size=8}${color 2c2c2c}${cpugraph 32,200 2c2c2c 46a646}
-${offset 710}${voffset 100}${color ffffff}${font Santana:size=9:style=Bold}IP Address: ${addr eth0}
-${offset 710}${voffset 0}${color ffffff}${font Santana:size=8}TCP Connections: ${tcp_portmon 1 65535 count}
-${offset 710}${voffset 0}${color ffffff}${font Santana:size=8}Down: ${downspeed eth0} k/s ${offset 8}Up:${upspeed eth0} k/s
-${offset 710}${voffset 0}${color ffffff}${font Santana:size=8}Interface eth0 (down / up) :
-${offset 710}${voffset 0}${color ffffff}${font Santana:size=8}${color 2c2c2c}${downspeedgraph eth0 32,200 b7b7b7 f4732d}
+# "Home" node (kernel, etc.)
+${offset 578}${voffset -110}${color EAEAEA}${font Santana:size=9:style=Bold}Linux ${kernel} kernel
+${offset 580}${voffset 0}${color 4a89a7}${font Santana:size=8}Uptime : ${offset 9}${color ffffff}${uptime}
+# "User" node (whoami, top process, etc.)
+${offset 828}${voffset -80}${color ffffff}${font Santana:size=9:style=Bold}${exec whoami}@${nodename}
+${offset 830}${voffset 0}${color ffffff}${font Santana:size=8}${color 46a646}Top (cpu) :  ${offset 9}${color ffffff}${top name 5} ${top cpu 5}
+${offset 830}${voffset 0}${color ffffff}${font Santana:size=8}${color 46a646}Top (RAM) : ${offset 9}${color ffffff}${top_mem name 5} ${top_mem mem 5}
+${offset 830}${voffset 0}${color 6f6f6f}CPU Usage (${cpu}%) :
+${offset 830}${voffset -2}${color ffffff}${font Santana:size=8}${color 2c2c2c}${cpugraph 32,200 2c2c2c 46a646}
+# "Network" node (IP, connections, etc.)
+${offset 708}${voffset 97}${color ffffff}${font Santana:size=9:style=Bold}IP Address : ${addr eth0}
+${offset 710}${voffset 0}${color ffffff}${font Santana:size=8}TCP Connections : ${tcp_portmon 1 65535 count}
+${offset 710}${voffset 0}${font Santana:size=8}${color f4732d}Down : ${offset 9}${color ffffff}${downspeed eth0}/s ${offset 8}${color ebff46}Up : ${offset 9}${color ffffff}${upspeed eth0} /s
+${offset 710}${voffset 0}${color 6f6f6f}${font Santana:size=8}Interface eth0 Usage :
+${offset 710}${voffset -2}${color ffffff}${font Santana:size=8}${color 2c2c2c}${downspeedgraph eth0 32,200 b7b7b7 f4732d}
 ${offset 710}${voffset -5}${color 2c2c2c}${upspeedgraph eth0 32,200 b7b7b7 ebff46}

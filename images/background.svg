@@ -15,7 +15,7 @@
    version="1.1"
    inkscape:version="0.48.3.1 r9886"
    sodipodi:docname="background.svg"
-   inkscape:export-filename="/home/ericw/.conky/rev-eng-2-4.png"
+   inkscape:export-filename="/home/ericw/.conky/background.png"
    inkscape:export-xdpi="90"
    inkscape:export-ydpi="90">
   <defs
@@ -28,8 +28,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.78477306"
-     inkscape:cx="541.37419"
-     inkscape:cy="430.01919"
+     inkscape:cx="553.21976"
+     inkscape:cy="490.17979"
      inkscape:current-layer="layer1"
      inkscape:document-units="px"
      showgrid="true"
@@ -57,7 +57,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -68,7 +68,7 @@
      transform="translate(0,-432)">
     <path
        style="fill:none;stroke:#2c2c2c;stroke-width:4;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-       d="m 40,575 0,80 c 0,25 65,45 65,70 0,60 0,150 0,175 0,20 5,25 25,25 25,0 95,0 120,0 50,0 100,-105 150,-105 25,0 120,0 145,0 25,0 45,-45 70,-45 25,0 185,0 185,0 l 0,0"
+       d="m 40,590 0,65 c 0,25 65,45 65,70 0,60 0,150 0,175 0,20 5,25 25,25 25,0 95,0 120,0 50,0 100,-105 150,-105 25,0 120,0 145,0 25,0 45,-45 70,-45 25,0 185,0 185,0 l 0,0"
        id="path3854"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccscscccccc" />
@@ -102,7 +102,7 @@
        transform="translate(15,420)" />
     <path
        sodipodi:type="arc"
-       style="fill:#ebff46;fill-opacity:1;stroke:#2c2c2c;stroke-width:4;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       style="fill:#e83737;fill-opacity:1;stroke:#2c2c2c;stroke-width:4;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        id="path3894"
        sodipodi:cx="90"
        sodipodi:cy="485"
