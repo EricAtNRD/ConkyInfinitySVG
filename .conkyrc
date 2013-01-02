@@ -25,6 +25,9 @@
 #				Use eth0 instead of wlan0
 #				Turn off transparency (and allow compiz to handle it)
 #				Use new SVG based background image.
+#				Add network graphs.
+#				Update colors to match haunted.lua.  
+#				Placed theme into git.
 ########################################################################################
 
 ## Conky settings

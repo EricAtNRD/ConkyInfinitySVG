@@ -71,7 +71,9 @@ As best I can tell, the following people had a hand in the creation of this them
 	- If you edit the svg, simply export the "page" at 90dpi and replace 
 	.conky/background.png
 
-10. Other notes:
+10. Extras - Included in extras/terminator/config is a config file for the "Terminator" terminal program.  This sets up Terminator with a color scheme that matches this Conky theme.  To install it, back up your existing terminator configuration (~/.config/terminator/config) and copy in the one from extras/terminator/config.  ** If you have your own terminator config, you may wish to manually merge the title colors and profile colors from the supplied file into your own configuration.
+
+11. Other notes:
 	- The following scripts were written separately and currently are not used. You can delete them if you wish:
 	
 		- cpu
