@@ -29,7 +29,7 @@
 
 ## Conky settings
 background yes
-update_interval 10.0
+update_interval 5.0
 
 cpu_avg_samples 2
 net_avg_samples 2
@@ -293,7 +293,7 @@ ${image ~/.conky/background.png}
 # Disk usage node
 ${offset 120}${voffset 222}${color bfbfbf}${font Santana:size=9:style=Bold}root : ${font Santana:size=9}${fs_used /}/${fs_size /}
 ${offset 120}${voffset 10}${color dfdfdf}${font Santana:size=9:style=Bold}home: ${font Santana:size=9}${fs_used /home}/${fs_size /home}$font
-${offset 120}${voffset 12}${color ffffff}${font Santana:size=9:style=Bold}swap: ${font Santana:size=8} ${swap} / ${swapfree}$font
+${offset 120}${voffset 10}${color ffffff}${font Santana:size=9:style=Bold}swap: ${font Santana:size=8} ${swap} / ${swapfree}$font
 # "Home" node (kernel, etc.)
 ${offset 578}${voffset -110}${color EAEAEA}${font Santana:size=9:style=Bold}Linux ${kernel} kernel
 ${offset 580}${voffset 0}${color 4a89a7}${font Santana:size=8}Uptime : ${offset 9}${color ffffff}${uptime}
