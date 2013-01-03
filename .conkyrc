@@ -1,4 +1,4 @@
-#########################################################################################
+###############################################################################
 #	Conky Theme	: InfinitySVG
 #
 #	Updates and SVG by:				Eric Weik
@@ -20,15 +20,17 @@
 #
 #	Changelog:
 #	 + v1.0.1:	Initial version by Harshit Yadav
-#    + v1.1.0:	Updates by EJW. 
+#    + v1.1.0:	Updates by EJW.
 #				Support for 1920x1080 display
 #				Use eth0 instead of wlan0
 #				Turn off transparency (and allow compiz to handle it)
 #				Use new SVG based background image.
-#				Add network graphs.
-#				Update colors to match haunted.lua.  
 #				Placed theme into git.
-########################################################################################
+#				Add network graphs.
+#				Update colors to match haunted.lua.
+#				Typography and layout tweaks.
+#    + v1.1.1:	Text examples (logotext, arbitrary multiline text).
+###############################################################################
 
 ## Conky settings
 background yes
@@ -313,3 +315,11 @@ ${offset 710}${voffset 0}${font Santana:size=8}${color f4732d}Down : ${offset 9}
 ${offset 710}${voffset 0}${color 6f6f6f}${font Santana:size=8}Interface eth0 Usage :
 ${offset 710}${voffset -2}$color${font Santana:size=8}${color 2c2c2c}${downspeedgraph eth0 32,200 b7b7b7 f4732d}
 ${offset 710}${voffset -5}${color 2c2c2c}${upspeedgraph eth0 32,200 b7b7b7 ebff46}
+# Positioning eset for static text examples below
+${voffset -158}
+# Static text example: Logo
+${offset 120}${color EAEAEA}${font Ubuntu:pixelsize=20}${color f4732d}Ubuntu$color 12.10
+# Static text example: Multi-line
+#${offset 120}$font${color 6f6f6f}random text can go here
+#${offset 120}and here...
+#${offset 120}and here...

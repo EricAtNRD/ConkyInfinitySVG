@@ -11,8 +11,8 @@ To call this script in Conky, use the following (assuming that you save this scr
 	lua_draw_hook_pre ring_stats
 	
 Changelog:
-+ v1.0 -- Original release (07/06/2012)
-+ v1.1 -- EJW: Updated to support 1920x1080 and fix some errors in Ubuntu 12.10.
++ v1.0.0 -- Original release (07/06/2012)
++ v1.1.0 -- EJW: Updated to fix some errors in Ubuntu 12.10 and on desktops.
 ]]
 
 settings_table = {
