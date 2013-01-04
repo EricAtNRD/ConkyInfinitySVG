@@ -5,7 +5,7 @@
 
 InfinitySVG is a theme for the "conky" system monitor for X. It is mostly based on the Infinity theme by Harshit Yadav.
 
-![InfinitySVG screenshot](images/InfinitySVG-screencap-960w.png)
+![InfinitySVG screenshot](https://github.com/circumjacence/ConkyInfinitySVG/raw/master/images/InfinitySVG-screencap-960w.png)
 
 For Harshit Yadav's original theme, please see: [Infinity on Deviantart.com](http://harshit1990.deviantart.com/art/Infinity-306921086)
 
@@ -88,7 +88,7 @@ As best I can tell, the following people had a hand in the creation of this them
 		- rings (this is an earlier version of the rings clock by 
 		Ken Berns <ken.berns@yahoo.de>)
 		- weather
-
+	
 	- For testing:  if you are testing changes to your background or the configuration files, you can skip using startconky.sh, and simply run conky directly.  In the distribution .conkyrc it is set to run in the background (via: background yes).  This means you'll need to run "killall conky;conky" to restart it.
 	- A few random items in .conkyrc you might want to look at:
 		
