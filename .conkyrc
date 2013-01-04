@@ -23,6 +23,8 @@
 #	 + [All further changes tracked in the git repository.]
 ###############################################################################
 
+
+
 ## Conky settings
 background yes
 update_interval 5.0
@@ -42,21 +44,28 @@ text_buffer_size 2048
 default_color b7b7b7
 
 
-## Window specifications
-own_window yes
 
-# Allow conky to handle transparency
+## Window specifications
+
+# Allow conky to handle transparency -- all or nothing
+#own_window yes
 #own_window_type conky
 #own_window_transparent yes
 
-# Allow compiz to handle transparency (you will need to add Conky to compiz)
+# Allow compiz to handle transparency manually (you will need to add Conky to compiz)
+own_window yes
 own_window_type normal
 own_window_transparent no
-
 own_window_hints undecorate,sticky,skip_taskbar,skip_pager,below
 
-border_inner_margin 0
-border_outer_margin 0
+# Allow conky to handle transparency (with percentages) with a compositor
+# From http://blog.mmassonnet.info/2011/08/xfce-48-with-conky.html)
+#own_window yes
+#own_window_type desktop
+#own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager	# make it behave like it belongs to the desktop
+#own_window_argb_visual yes	# true transparency, a compositor has to be active
+#own_window_argb_value 70	# make the background semi-transparent
+
 
 
 ## This Resolution is set according to the screen resolution of 1920 1080
@@ -67,17 +76,22 @@ border_outer_margin 0
 
 minimum_size 1920 1080
 
-alignment top_left
-#alignment top_right
+#alignment top_left
+alignment top_right
 gap_x 0
 gap_y 0
 
 
+
 ## Graphics settings
+border_inner_margin 0
+border_outer_margin 0
+
 draw_shades no
 draw_outline no
 draw_borders no
 draw_graph_borders yes
+
 
 
 ## Text settings
@@ -90,9 +104,11 @@ temperature_unit fahrenheit
 #temperature_unit celsius
 
 
+
 ## Lua: load clock rings.
 lua_load ~/.lua/scripts/haunted.lua
 lua_draw_hook_pre clock_rings
+
 
 
 ## Possible variables to be used:
@@ -278,6 +294,7 @@ lua_draw_hook_pre clock_rings
 # variable is given either in format $variable or in ${variable}. Latter
 # allows characters right after the variable and must be used in network
 # stuff because of an argument
+
 
 
 # stuff after 'TEXT' will be formatted on screen

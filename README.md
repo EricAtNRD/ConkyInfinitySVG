@@ -85,15 +85,14 @@ As best I can tell, the following people had a hand in the creation of this them
 		- cpu
 		- mail
 		- mem
-		- rings (this is an earlier version of the rings clock by 
-		Ken Berns <ken.berns@yahoo.de>)
+		- rings
 		- weather
-	
+		
 	- For testing:  if you are testing changes to your background or the configuration files, you can skip using startconky.sh, and simply run conky directly.  In the distribution .conkyrc it is set to run in the background (via: background yes).  This means you'll need to run "killall conky;conky" to restart it.
 	- A few random items in .conkyrc you might want to look at:
 		
 		- update_interval 5.0 (update interval in seconds)
 		- default_color b7b7b7 (color of most of the text and graph outlines)
 		- At the very bottom are a few examples of static text (a logo and multi-line text) that can be uncommented
-	
+		
 
