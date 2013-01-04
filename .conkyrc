@@ -20,16 +20,7 @@
 #
 #	Changelog:
 #	 + v1.0.1:	Initial version by Harshit Yadav
-#    + v1.1.0:	Updates by EJW.
-#				Support for 1920x1080 display
-#				Use eth0 instead of wlan0
-#				Turn off transparency (and allow compiz to handle it)
-#				Use new SVG based background image.
-#				Placed theme into git.
-#				Add network graphs.
-#				Update colors to match haunted.lua.
-#				Typography and layout tweaks.
-#    + v1.1.1:	Text examples (logotext, arbitrary multiline text).
+#	 + [All further changes tracked in the git repository.]
 ###############################################################################
 
 ## Conky settings
@@ -45,9 +36,11 @@ double_buffer yes
 no_buffers yes
 
 text_buffer_size 2048
+
 #imlib_cache_size 0
 
 default_color b7b7b7
+
 
 ## Window specifications
 own_window yes
@@ -74,9 +67,10 @@ border_outer_margin 0
 
 minimum_size 1920 1080
 
-alignment tr
-gap_x 10
-gap_y 55
+alignment top_left
+#alignment top_right
+gap_x 0
+gap_y 0
 
 
 ## Graphics settings
@@ -289,9 +283,9 @@ lua_draw_hook_pre clock_rings
 # stuff after 'TEXT' will be formatted on screen
 TEXT
 # Clock and header
- ${offset 700}${color EAEAEA}${font GE Inspira:pixelsize=120}${time %H:%M}${font}${voffset -84}${voffset 10}${color FFA300}${font GE Inspira:pixelsize=42}${time %d} ${voffset -15}${color EAEAEA}${font GE Inspira:pixelsize=22}${time  %B} ${time %Y}${font}${voffset 124}${font GE Inspira:pixelsize=58}${offset -800}${time %A}${font}
+ ${offset 700}${color EAEAEA}${font GE Inspira:pixelsize=120}${time %H:%M}${font}${voffset -84}${voffset 10}${color FFA300}${font GE Inspira:pixelsize=42}${time %d} ${voffset -15}${color EAEAEA}${font GE Inspira:pixelsize=22}${time  %B} ${time %Y}${font}${voffset 124}${font GE Inspira:pixelsize=58}${offset -547}${time %A}${font}
 ${offset 720}${voffset -100}${font Ubuntu:pixelsize=10}${color FFA300}HD ${offset 9}$color${fs_free /} / ${fs_size /}${offset 30}${color FFA300}RAM ${offset 9}$color$mem / $memmax${offset 30}${color FFA300}CPU ${offset 9}$color${cpu cpu0}%
-${voffset 10}${offset 270}${color 2c2c2c}${hr 4}
+${voffset 10}${offset 295}${color 2c2c2c}${hr 4}
 ${image ~/.conky/background.png}
 
 

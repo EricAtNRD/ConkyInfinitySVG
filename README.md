@@ -42,7 +42,7 @@ As best I can tell, the following people had a hand in the creation of this them
 4. Open ~/.conkyrc in your favorite editor and adjust the screen resolution:
 	- minimum_size 1920 1080
 
-5. This theme uses Compiz for partial transparency of the conky output. If you are not using a compositing window-manager such as compiz, you can make the conky window transparent by altering the following settings in ~/.conkyrc:
+5. (optional) This theme uses Compiz for partial transparency of the conky output. If you are **not** using a compositing window-manager such as compiz, you can make the conky window transparent by altering the following settings in ~/.conkyrc (if you are using compiz, skip this step and use step 9 instead).
 
 		# Allow conky to handle transparency
 		own_window_type conky
@@ -65,12 +65,12 @@ As best I can tell, the following people had a hand in the creation of this them
 	- Ubuntu: Dash > (search) Startup Applications > Add
 	- Other: see your location documentation to add this as a startup application.
 
-9. We can use Compiz to make the conky window partially transparent.  This can be accomplished via ccsm - CompizConfig Settings Manager, use with caution (it is fairly easy to render your desktop unusable with ccsm)!
+9. We can use Compiz to make the conky window partially transparent.  This can be accomplished via ccsm - CompizConfig Settings Manager, use with caution (it is fairly easy to render your desktop unusable with ccsm).  If use set up conky to handle transparency in step 5, skip this step.
 	- If not installed, install compizconfig-settings-manager 
 	- Run ccsm
 	- Go to: Accessibility > Opacity, Brightness and Saturation > (enable if not already)
 	- In the Opacity tab, click "New"
-	- In "Windows" enter "name=Conky"
+	- In "Windows" enter "name=Conky" (exactly as shown -- do not just type "Conky")
 	- In "Window values" enter "66" or so (higher for less transparent, lower for more)
 
 10. Tweak the background image if you wish.
