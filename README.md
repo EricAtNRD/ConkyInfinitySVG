@@ -29,9 +29,7 @@ As best I can tell, the following people had a hand in the creation of this them
 	- Ubuntu:   apt-get install conky-all
 	- Fedora: yum install conky
 	- Other: see your local documentation or try [the Conky documentation](http://conky.sourceforge.net/documentation.html).
-
-2. Extract the InfinitySVG tar file into its own directory somewhere.
-
+2. Extract the ConkyInfinitySVG distribution into its own directory somewhere.
 3. Copy .conkyrc, and .conky/ to your home directory:
 	- cp .conkyrc ~/
 	- cp -r .conky ~/
@@ -40,13 +38,13 @@ As best I can tell, the following people had a hand in the creation of this them
 	- minimum_size 1920 1080
 
 5. (optional) By default setup assumes we will set up Compiz manually for partial transparency of the conky output (step 9 below). If you are **not** using a compositing window-manager such as compiz, you can make the conky window transparent by altering the "own_window_type" and "own_window_transparent" settings in ~/.conkyrc.  Included in .conkyrc are three examples: manual with Compiz, automatic with a compositor, and automatic using conky directly.  Uncomment as desired if you wish to change this.
-		
+
 6. (optional) Check .conky/scripts/haunted.lua for any additional adjustments required for your screen resolution.
 
 7. Now you are ready to run conky.  Open a terminal and run the following:
-		chmod a+x ~/.conky/startconky.sh
-		sh ~/.conky/startconky.sh
-		(Conky will start after 5 seconds.)
+	- chmod a+x ~/.conky/startconky.sh
+	- sh ~/.conky/startconky.sh
+	- (Conky will start after 5 seconds.)
 
 8. Add ~/.conky/startconky.sh as a startup application.
 	- Ubuntu: Dash > (search) Startup Applications > Add
@@ -74,7 +72,6 @@ As best I can tell, the following people had a hand in the creation of this them
 		- .conky/examples/rings
 		- .conky/examples/weather
 		- .conky/examples/rings
-		
 	- For testing:  if you are testing changes to your background or the configuration files, you can skip using startconky.sh, and simply run conky directly.  In the distribution .conkyrc it is set to run in the background (via: background yes).  This means you'll need to run "killall conky;conky" to restart it.
 	- A few random items in .conkyrc you might want to look at:
 		- update_interval 5.0 (update interval in seconds)
