@@ -3,11 +3,9 @@
 
 ## About
 
-InfinitySVG is a theme for the "conky" system monitor for X. It is mostly based on the Infinity theme by Harshit Yadav.
+InfinitySVG is a theme for the "conky" system monitor for X. It is based on the Infinity theme by Harshit Yadav.
 
 ![InfinitySVG screenshot](https://github.com/circumjacence/ConkyInfinitySVG/raw/master/images/InfinitySVG-screencap-960w.png)
-
-For Harshit Yadav's original theme, please see: [Infinity on Deviantart.com](http://harshit1990.deviantart.com/art/Infinity-306921086)
 
 
 ## Acknowledgements
@@ -21,9 +19,9 @@ As best I can tell, the following people had a hand in the creation of this them
 	- [https://github.com/somerandomdude/Iconic](https://github.com/somerandomdude/Iconic)
 - Original Infinity theme by:	Harshit Yadav
 	- [http://harshit1990.deviantart.com/art/Infinity-306921086](http://harshit1990.deviantart.com/art/Infinity-306921086)
-- Includes lua code: Clock Rings by londonali1010 (2009)
+- Includes lua code: Ring Meters by londonali1010 (2009)
 	- [http://londonali1010.deviantart.com/](http://londonali1010.deviantart.com/)
-
+	- [http://londonali1010.deviantart.com/gallery/#/d2ciqev](http://londonali1010.deviantart.com/gallery/#/d2ciqev)
 
 ## Installation Instructions
 
@@ -34,34 +32,23 @@ As best I can tell, the following people had a hand in the creation of this them
 
 2. Extract the InfinitySVG tar file into its own directory somewhere.
 
-3. Copy .conkyrc, .lua, and .conky to your home directory:
-	- cp --archive .conkyrc ~/
-	- cp --archive .conky ~/
-	- cp --archive .lua ~/
+3. Copy .conkyrc, and .conky/ to your home directory:
+	- cp .conkyrc ~/
+	- cp -r .conky ~/
 
 4. Open ~/.conkyrc in your favorite editor and adjust the screen resolution:
 	- minimum_size 1920 1080
 
-5. (optional) This theme uses Compiz for partial transparency of the conky output. If you are **not** using a compositing window-manager such as compiz, you can make the conky window transparent by altering the following settings in ~/.conkyrc (if you are using compiz, skip this step and use step 9 instead).
-
-		# Allow conky to handle transparency
-		own_window_type conky
-		own_window_transparent yes
+5. (optional) By default setup assumes we will set up Compiz manually for partial transparency of the conky output (step 9 below). If you are **not** using a compositing window-manager such as compiz, you can make the conky window transparent by altering the "own_window_type" and "own_window_transparent" settings in ~/.conkyrc.  Included in .conkyrc are three examples: manual with Compiz, automatic with a compositor, and automatic using conky directly.  Uncomment as desired if you wish to change this.
 		
-		# Allow compiz to handle transparency (you will need to add Conky to compiz)
-		# own_window_type normal
-		# own_window_transparent no
-		
-6. (optional) Check haunted.lua for any additional adjustments required for your screen resolution.
+6. (optional) Check .conky/scripts/haunted.lua for any additional adjustments required for your screen resolution.
 
 7. Now you are ready to run conky.  Open a terminal and run the following:
-
 		chmod a+x ~/.conky/startconky.sh
 		sh ~/.conky/startconky.sh
 		(Conky will start after 5 seconds.)
 
 8. Add ~/.conky/startconky.sh as a startup application.
-
 	- Ubuntu: Dash > (search) Startup Applications > Add
 	- Other: see your location documentation to add this as a startup application.
 
@@ -80,19 +67,17 @@ As best I can tell, the following people had a hand in the creation of this them
 11. Extras - Included in extras/terminator/config is a config file for the "Terminator" terminal program.  This sets up Terminator with a color scheme that matches this Conky theme.  To install it, back up your existing terminator configuration (~/.config/terminator/config) and copy in the one from extras/terminator/config.  ** If you have your own terminator config, you may wish to manually merge the title colors and profile colors from the supplied file into your own configuration.
 
 12. Other notes:
-	- The following scripts were written separately and currently are not used. You can delete them if you wish:
-	
-		- cpu
-		- mail
-		- mem
-		- rings
-		- weather
+	- The following scripts were written separately and currently are not used, but are included for example.
+		- .conky/examples/cpu
+		- .conky/examples/mail
+		- .conky/examples/mem
+		- .conky/examples/rings
+		- .conky/examples/weather
+		- .conky/examples/rings
 		
 	- For testing:  if you are testing changes to your background or the configuration files, you can skip using startconky.sh, and simply run conky directly.  In the distribution .conkyrc it is set to run in the background (via: background yes).  This means you'll need to run "killall conky;conky" to restart it.
 	- A few random items in .conkyrc you might want to look at:
-		
 		- update_interval 5.0 (update interval in seconds)
 		- default_color b7b7b7 (color of most of the text and graph outlines)
 		- At the very bottom are a few examples of static text (a logo and multi-line text) that can be uncommented
-		
 

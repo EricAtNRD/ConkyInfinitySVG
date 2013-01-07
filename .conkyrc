@@ -11,12 +11,14 @@
 #	b7b7b7 (light grey)
 #	6f6f6f (medium grey)
 #	2c2c2c (dark grey)
-#	4a89a7 (teal / blue)
-#	e83737 (red)
-#	ebff46 (yellow)
-#	46a646 (green)
-#	f4732d (orange)
-#	FFA300 (bright orange)
+#
+#	4a89a7 (blue)		hardware / memory / root
+#	468626 (blue alt)	
+#	e83737 (red)		swap
+#	46a646 (green)		user / cpu / home
+#	f4732d (orange)		network
+#	ebff46 (yellow)		network
+#	FFA300 (br. orange)	text highlights
 #
 #	Changelog:
 #	 + v1.0.1:	Initial version by Harshit Yadav
@@ -61,7 +63,7 @@ own_window_hints undecorate,sticky,skip_taskbar,skip_pager,below
 # Allow conky to handle transparency (with percentages) with a compositor
 # From http://blog.mmassonnet.info/2011/08/xfce-48-with-conky.html)
 #own_window yes
-#own_window_type desktop
+#window_own_type desktop
 #own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager	# make it behave like it belongs to the desktop
 #own_window_argb_visual yes	# true transparency, a compositor has to be active
 #own_window_argb_value 70	# make the background semi-transparent
@@ -106,7 +108,7 @@ temperature_unit fahrenheit
 
 
 ## Lua: load clock rings.
-lua_load ~/.lua/scripts/haunted.lua
+lua_load ~/.conky/scripts/haunted.lua
 lua_draw_hook_pre clock_rings
 
 
@@ -311,21 +313,21 @@ ${offset 120}${voffset 223}${color 4a89a7}${font Santana:size=8:style=Bold}root$
 ${offset 120}${voffset 12}${color 46a646}${font Santana:size=8:style=Bold}home$color${font Santana:size=8} : ${offset 7}${fs_used /home}/${fs_size /home}$font
 ${offset 120}${voffset 12}${color e83737}${font Santana:size=8:style=Bold}swap$color${font Santana:size=8} : ${offset 10}${swap} / ${swapfree}$font
 # "Home" node (kernel, etc.)
-${offset 578}${voffset -108}$color${font Santana:size=9:style=Bold}Linux ${kernel} kernel
-${offset 580}${voffset 0}${color 4a89a7}${font Santana:size=8}Uptime : ${offset 9}$color${uptime}
+${offset 583}${voffset -108}$color${font Santana:size=9:style=Bold}Linux ${kernel} kernel
+${offset 585}${voffset 0}${color 4a89a7}${font Santana:size=8}Uptime : ${offset 9}$color${uptime}
 # "User" node (whoami, top process, etc.)
-${offset 828}${voffset -78}$color${font Santana:size=9:style=Bold}${exec whoami}@${nodename}
-${offset 830}${voffset 0}$color${font Santana:size=8}${color 46a646}Top (cpu) :  ${offset 9}$color${top name 5} ${top cpu 5}
-${offset 830}${voffset 0}$color${font Santana:size=8}${color 46a646}Top (RAM) : ${offset 9}$color${top_mem name 5} ${top_mem mem 5}
-${offset 830}${voffset 0}${color 6f6f6f}CPU Usage (${cpu}%) :
-${offset 830}${voffset -2}$color${font Santana:size=8}${color 2c2c2c}${cpugraph 32,200 2c2c2c 46a646}
+${offset 833}${voffset -78}$color${font Santana:size=9:style=Bold}${exec whoami}@${nodename}
+${offset 835}${voffset 0}$color${font Santana:size=8}${color 46a646}Top (cpu) :  ${offset 9}$color${top name 5} ${top cpu 5}
+${offset 835}${voffset 0}$color${font Santana:size=8}${color 46a646}Top (RAM) : ${offset 9}$color${top_mem name 5} ${top_mem mem 5}
+${offset 835}${voffset 0}${color 6f6f6f}CPU Usage (${cpu}%) :
+${offset 835}${voffset -2}$color${font Santana:size=8}${color 2c2c2c}${cpugraph 32,200 2c2c2c 46a646}
 # "Network" node (IP, connections, etc.)
-${offset 708}${voffset 88}$color${font Santana:size=9:style=Bold}IP Address : ${addr eth0}
-${offset 710}${voffset 0}$color${font Santana:size=8}TCP Connections : ${tcp_portmon 1 65535 count}
-${offset 710}${voffset 0}${font Santana:size=8}${color f4732d}Down : ${offset 9}$color${downspeed eth0}/s ${offset 8}${color ebff46}Up : ${offset 9}$color${upspeed eth0} /s
-${offset 710}${voffset 0}${color 6f6f6f}${font Santana:size=8}Interface eth0 Usage :
-${offset 710}${voffset -2}$color${font Santana:size=8}${color 2c2c2c}${downspeedgraph eth0 32,200 b7b7b7 f4732d}
-${offset 710}${voffset -5}${color 2c2c2c}${upspeedgraph eth0 32,200 b7b7b7 ebff46}
+${offset 713}${voffset 88}$color${font Santana:size=9:style=Bold}IP Address : ${addr eth0}
+${offset 715}${voffset 0}$color${font Santana:size=8}TCP Connections : ${tcp_portmon 1 65535 count}
+${offset 715}${voffset 0}${font Santana:size=8}${color f4732d}Down : ${offset 9}$color${downspeed eth0}/s ${offset 8}${color ebff46}Up : ${offset 9}$color${upspeed eth0} /s
+${offset 715}${voffset 0}${color 6f6f6f}${font Santana:size=8}Interface eth0 Usage :
+${offset 715}${voffset -2}$color${font Santana:size=8}${color 2c2c2c}${downspeedgraph eth0 32,200 b7b7b7 f4732d}
+${offset 715}${voffset -5}${color 2c2c2c}${upspeedgraph eth0 32,200 b7b7b7 ebff46}
 # Positioning eset for static text examples below
 ${voffset -158}
 # Static text example: Logo
