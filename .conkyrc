@@ -51,7 +51,7 @@ default_color b7b7b7
 
 # Allow conky to handle transparency -- all or nothing
 #own_window yes
-#own_window_type conky
+#own_window_type desktop
 #own_window_transparent yes
 
 # Allow compiz to handle transparency manually (you will need to add Conky to compiz)
