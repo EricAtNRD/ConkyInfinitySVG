@@ -64,6 +64,8 @@ default_color FFFFFF
 
 ############
 # - Code - #
+
+available on code repositary
 ############
 TEXT
 ${font Santana:size=12}New Mails:   ${color #ffffff}${font Santana:style=bold:size=12}${pop3_unseen [POP3_SERVER] [LOGIN_NAME] [PASSWORT]}
